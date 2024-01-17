@@ -32,7 +32,6 @@
 }
 
 body {
-  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -82,7 +81,18 @@ button {
   cursor: pointer;
 }
 
+:root {
+  --black-clr: #000000;
+  --blue-clr: #0E374E;
+  --light-clr: #F3F4F6;
+  --red-clr: #B91C1C;
+  --white-clr: #FFFFFF;
+
+  --transition: all 0.15s ease-in-out;
+}
+
 body {
+  background-color: var(--light-clr);
   font-family: "Roboto", Arial, sans-serif;
   font-size: 1rem;
   font-weight: 400;
