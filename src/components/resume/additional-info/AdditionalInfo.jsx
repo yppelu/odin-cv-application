@@ -1,11 +1,11 @@
 import './additional-info.css';
 import InfoSection from './info-section/InfoSection';
 
-function AdditionalInfo({ info }) {
+function AdditionalInfo({ person }) {
   return (
     <div className="additional-info">
-      <InfoSection title="Education" data={info.education} />
-      <InfoSection title="Professional Experience" data={info.experience} />
+      <InfoSection person={person} section="education" />
+      <InfoSection person={person} section="experience" />
     </div>
   );
 }

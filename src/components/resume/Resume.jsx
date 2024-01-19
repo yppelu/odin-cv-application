@@ -3,11 +3,11 @@ import './resume.css';
 import PersonalInfo from './personal-info/PersonalInfo.jsx';
 import AdditionalInfo from './additional-info/AdditionalInfo.jsx';
 
-function Resume({ personalInfo, education, experience }) {
+function Resume({ person }) {
   return (
     <div className="resume">
-      <PersonalInfo info={personalInfo} />
-      <AdditionalInfo info={{ education, experience }} />
+      <PersonalInfo person={person} />
+      <AdditionalInfo person={person} />
     </div>
   );
 }

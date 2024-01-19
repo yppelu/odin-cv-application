@@ -1,14 +1,15 @@
 import exampleData from '../../../helpers/example-data.js';
 import emptyData from '../../../helpers/empty-data.js';
+
 import './resume-controls.css';
 
-function ResumeControls({ changePerson }) {
+function ResumeControls({ setPerson }) {
   return (
     <div className="resume-controls">
       <button
         className="resume-controls__clear-button"
         type="button"
-        onClick={() => changePerson(JSON.parse(JSON.stringify(emptyData)))}
+        onClick={() => setPerson(JSON.parse(JSON.stringify(emptyData)))}
       >
         <svg
           className="resume-controls__clear-icon"
@@ -23,7 +24,7 @@ function ResumeControls({ changePerson }) {
       <button
         className="resume-controls__load-example-button"
         type="button"
-        onClick={() => changePerson(JSON.parse(JSON.stringify(exampleData)))}
+        onClick={() => setPerson(JSON.parse(JSON.stringify(exampleData)))}
       >
         Load Example
       </button>

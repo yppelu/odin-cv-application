@@ -2,14 +2,16 @@ import './personal-info.css';
 
 import Contact from './__contact/Contact.jsx';
 
-function PersonalInfo({ info }) {
+function PersonalInfo({ person }) {
   return (
     <div className="personal-info">
-      <h1 className="personal-info__name">{info.fullName}</h1>
+      <h1 className="personal-info__name">
+        {person.personalInfo.fullName}
+      </h1>
       <div className="personal-info__contacts">
-        <Contact data={info.email} icon="email" />
-        <Contact data={info.phoneNumber} icon="phone" />
-        <Contact data={info.address} icon="address" />
+        <Contact iconName="email" data={person.personalInfo.email} />
+        <Contact iconName="phoneNumber" data={person.personalInfo.phoneNumber} />
+        <Contact iconName="address" data={person.personalInfo.address} />
       </div>
     </div>
   );

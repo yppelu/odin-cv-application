@@ -1,17 +1,17 @@
 import { useState } from 'react';
 
-import exampleData from './helpers/example-data.js';
+import emptyData from './helpers/empty-data.js';
 
 import Editor from './components/editor/Editor.jsx';
 import Resume from './components/resume/Resume.jsx';
 
 function App() {
-  const [person, setPerson] = useState(exampleData);
+  const [person, setPerson] = useState(emptyData);
 
   return (
     <>
-      <Editor person={person} changePerson={setPerson} />
-      <Resume {...person} />
+      <Editor setPerson={setPerson} />
+      <Resume person={person} />
     </>
   );
 }

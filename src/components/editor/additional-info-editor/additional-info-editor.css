@@ -9,6 +9,11 @@
   padding: 1rem 0;
 }
 
+
+.additional-info-editor>.additional-info-editor__item-preview:last-of-type {
+  border-bottom: 4px solid var(--light-clr);
+}
+
 .additional-info-editor__header {
   display: flex;
   align-items: center;

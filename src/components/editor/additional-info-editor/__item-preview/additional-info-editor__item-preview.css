@@ -6,16 +6,22 @@
   align-items: center;
   justify-content: space-between;
 
-  border: none;
+  border-top: 4px solid var(--light-clr);
   padding: 0 1rem;
   height: 3.5rem;
   width: 100%;
 }
 
 .additional-info-editor__item-name {
+  background-color: transparent;
   cursor: pointer;
   font-size: 1.15rem;
   font-weight: 500;
+  text-align: start;
+
+  border: none;
+  height: 100%;
+  width: 100%;
 }
 
 .additional-info-editor__remove-item-button {

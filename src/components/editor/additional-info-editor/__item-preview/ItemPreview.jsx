@@ -1,23 +1,12 @@
 import './additional-info-editor__item-preview.css';
 
-function ItemPreview({ id, topic, itemName, person, changePerson, editItem }) {
-  function handleRemoveItem() {
-    const newPerson = JSON.parse(JSON.stringify(person));
-    for (let i = 0; i < newPerson[topic].length; i++) {
-      if (newPerson[topic].id === id) {
-        newPerson[topic].splice(i, 1);
-      }
-    }
-    changePerson(newPerson);
-  }
-
+function ItemPreview() {
   return (
     <div className="additional-info-editor__item-preview">
-      <h3 className="additional-info-editor__item-name" onClick={() => editItem(id)}>{itemName}</h3>
+      <button className="additional-info-editor__item-name">Umbrella Inc.</button>
       <button
         className="additional-info-editor__remove-item-button"
         type="button"
-        onClick={handleRemoveItem}
       >
         <svg
           className="additional-info-editor__remove-item-icon"

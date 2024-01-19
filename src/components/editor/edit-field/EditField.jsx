@@ -1,15 +1,10 @@
 import './edit-field.css';
 
-function EditField({ changePerson, propertyToChange, value, label }) {
+function EditField() {
   return (
     <label className="edit-field">
-      {label}
-      <input
-        className="edit-field__input"
-        type="text"
-        value={value}
-        onChange={(e) => changePerson(e, propertyToChange)}
-      />
+      Full Name
+      <input className="edit-field__input" type="text" value="Josephine Meyers" />
     </label>
   );
 }
