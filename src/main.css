@@ -88,12 +88,27 @@ button {
   --red-clr: #B91C1C;
   --white-clr: #FFFFFF;
 
+  --box-shadow: 0 0 12px color-mix(in srgb, var(--blue-clr) 25%, var(--light-clr) 75%);
   --transition: all 0.15s ease-in-out;
+}
+
+*:focus {
+  outline: 2px solid #3E80EA;
 }
 
 body {
   background-color: var(--light-clr);
+  color: var(--black-clr);
   font-family: "Roboto", Arial, sans-serif;
   font-size: 1rem;
   font-weight: 400;
+}
+
+#root {
+  display: flex;
+  gap: 2.5%;
+
+  margin: 1rem auto;
+  max-width: 1280px;
+  width: 95%;
 }

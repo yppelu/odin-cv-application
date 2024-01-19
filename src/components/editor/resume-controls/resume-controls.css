@@ -1,0 +1,50 @@
+.resume-controls {
+  background-color: var(--white-clr);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1rem;
+
+  position: sticky;
+  top: 1rem;
+
+  padding: 1rem;
+}
+
+.resume-controls__clear-button,
+.resume-controls__load-example-button {
+  border-radius: 8px;
+  font-weight: 500;
+  transition: var(--transition);
+
+  border: none;
+  height: 2.25rem;
+}
+
+.resume-controls__clear-button {
+  background: transparent;
+  color: var(--red-clr);
+
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+
+  padding: 0 0.5rem;
+}
+
+.resume-controls__clear-icon {
+  height: 80%;
+}
+
+.resume-controls__load-example-button {
+  background-color: var(--light-clr);
+  padding: 0 1.5rem;
+}
+
+.resume-controls__clear-button:active,
+.resume-controls__load-example-button:active {
+  transform: scale(0.95);
+}

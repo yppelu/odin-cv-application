@@ -1,0 +1,10 @@
+.editor {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  position: relative;
+
+  max-width: 448px;
+  width: 35%;
+}

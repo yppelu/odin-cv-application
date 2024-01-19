@@ -1,0 +1,13 @@
+.personal-info__contact {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+
+  height: calc(1rem * 1.5);
+  width: max-content;
+}
+
+.personal-info__contact-icon {
+  aspect-ratio: 1 / 1;
+  height: 100%;
+}

@@ -22,6 +22,7 @@ module.exports = {
     'prefer-const': 'error',
     'no-self-assign': 'warn',
     'no-console': 'warn',
-    'constructor-super': 'error'
+    'constructor-super': 'error',
+    "react/prop-types": "off"
   },
 }
