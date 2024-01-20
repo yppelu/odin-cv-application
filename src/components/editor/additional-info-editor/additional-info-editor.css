@@ -53,7 +53,12 @@
 }
 
 .additional-info-editor__collapse-icon {
+  transition: var(--transition);
   height: 100%;
+}
+
+.additional-info-editor__collapse-icon.collapsed {
+  transform: rotate(180deg);
 }
 
 .additional-info-editor__add-info-button {
