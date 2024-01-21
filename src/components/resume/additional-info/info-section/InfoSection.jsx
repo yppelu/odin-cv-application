@@ -20,7 +20,7 @@ function InfoSection({ person, section }) {
               </h3>
               {
                 item.positionTitle
-                  ? <p className="info-section__item-job-position">UX & UI Designer</p>
+                  ? <p className="info-section__item-job-position">{item.positionTitle}</p>
                   : null
               }
               <p className="info-section__item-description">
