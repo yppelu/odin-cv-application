@@ -47,15 +47,15 @@
   border: 1px solid var(--blue-clr);
 }
 
-.education-form-editor__delete-button:hover>.education-form-editor__delete-icon {
-  fill: var(--white-clr);
-}
-
 @media (hover: hover) {
   .education-form-editor__delete-button:hover {
     background-color: var(--red-clr);
     color: var(--white-clr);
     border: 1px solid transparent;
+  }
+
+  .education-form-editor__delete-button:hover>.education-form-editor__delete-icon {
+    fill: var(--white-clr);
   }
 
   .education-form-editor__save-button:hover {

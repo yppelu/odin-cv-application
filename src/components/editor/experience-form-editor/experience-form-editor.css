@@ -47,15 +47,15 @@
   border: 1px solid var(--blue-clr);
 }
 
-.experience-form-editor__delete-button:hover>.experience-form-editor__delete-icon {
-  fill: var(--white-clr);
-}
-
 @media (hover: hover) {
   .experience-form-editor__delete-button:hover {
     background-color: var(--red-clr);
     color: var(--white-clr);
     border: 1px solid transparent;
+  }
+
+  .experience-form-editor__delete-button:hover>.experience-form-editor__delete-icon {
+    fill: var(--white-clr);
   }
 
   .experience-form-editor__save-button:hover {
