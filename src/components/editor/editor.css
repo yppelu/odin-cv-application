@@ -8,3 +8,9 @@
   max-width: 448px;
   width: 35%;
 }
+
+@media (max-width: 425px) {
+  .editor {
+    width: 100%;
+  }
+}

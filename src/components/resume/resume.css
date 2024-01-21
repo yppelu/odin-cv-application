@@ -5,3 +5,9 @@
   max-width: 800px;
   width: 62.5%;
 }
+
+@media (max-width: 425px) {
+  .resume {
+    width: 100%;
+  }
+}

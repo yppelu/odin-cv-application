@@ -46,3 +46,11 @@
 .info-section__item-job-position {
   margin-bottom: 0.2rem;
 }
+
+@media (max-width: 425px) {
+
+  .info-section__item-date-place>p,
+  .info-section__item-body {
+    width: 100%;
+  }
+}
