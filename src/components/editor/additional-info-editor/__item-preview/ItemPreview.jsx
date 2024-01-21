@@ -1,10 +1,14 @@
 import './additional-info-editor__item-preview.css';
 
-function ItemPreview({ id, title, removeItem }) {
+function ItemPreview({ id, title, removeItem, setIdToChange, setIsAddingNewData }) {
   return (
     <div className="additional-info-editor__item-preview">
       <button
         className="additional-info-editor__item-name"
+        onClick={() => {
+          setIsAddingNewData(true);
+          setIdToChange(id);
+        }}
       >
         {title}
       </button>

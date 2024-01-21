@@ -92,7 +92,7 @@ function AdditionalInfoEditor({ isAddingNewData, setIsAddingNewData, person, set
             <div className="additional-info-editor__items">
               {
                 person[section].map(item =>
-                  <ItemPreview key={item.id} id={item.id} title={item.schoolName || item.companyName} removeItem={handleRemoveItem} />
+                  <ItemPreview key={item.id} id={item.id} title={item.schoolName || item.companyName} removeItem={handleRemoveItem} setIdToChange={setIdToChange} setIsAddingNewData={setIsAddingNewData} />
                 )
               }
             </div>
