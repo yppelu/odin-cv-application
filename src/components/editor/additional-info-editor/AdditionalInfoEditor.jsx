@@ -89,30 +89,29 @@ function AdditionalInfoEditor({ isAddingNewData, setIsAddingNewData, person, set
       {
         isCollapsed ? null :
           !isAddingNewData ?
-            <div className="additional-info-editor__items">
-              {
-                person[section].map(item =>
-                  <ItemPreview key={item.id} id={item.id} title={item.schoolName || item.companyName} removeItem={handleRemoveItem} setIdToChange={setIdToChange} setIsAddingNewData={setIsAddingNewData} />
-                )
-              }
-            </div>
+            <>
+              <div className="additional-info-editor__items">
+                {
+                  person[section].map(item =>
+                    <ItemPreview key={item.id} id={item.id} title={item.schoolName || item.companyName} removeItem={handleRemoveItem} setIdToChange={setIdToChange} setIsAddingNewData={setIsAddingNewData} />
+                  )
+                }
+              </div>
+              <button
+                className="additional-info-editor__add-info-button"
+                type="button"
+                onClick={() => {
+                  handleAddItem();
+                  setIsAddingNewData(true);
+                }
+                }
+              >
+                + {sectionTitle}
+              </button>
+            </>
             : section === 'education'
               ? <EducationFormEditor person={person} id={idToChange} setPerson={setPerson} setIsAddingNewData={setIsAddingNewData} />
               : <ExperienceFormEditor person={person} id={idToChange} setPerson={setPerson} setIsAddingNewData={setIsAddingNewData} />
-      }
-      {
-        isAddingNewData ? null :
-          <button
-            className="additional-info-editor__add-info-button"
-            type="button"
-            onClick={() => {
-              handleAddItem();
-              setIsAddingNewData(true);
-            }
-            }
-          >
-            + {sectionTitle}
-          </button>
       }
     </div>
   );
