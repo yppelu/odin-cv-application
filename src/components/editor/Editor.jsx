@@ -8,9 +8,9 @@ function Editor({ person, setPerson }) {
   return (
     <div className="editor">
       <ResumeControls setPerson={setPerson} />
-      <PersonalInfoEditor person={person} />
-      <AdditionalInfoEditor person={person} section="education" />
-      <AdditionalInfoEditor person={person} section="experience" />
+      <PersonalInfoEditor person={person} setPerson={setPerson} />
+      <AdditionalInfoEditor person={person} setPerson={setPerson} section="education" />
+      <AdditionalInfoEditor person={person} setPerson={setPerson} section="experience" />
     </div>
   );
 }

@@ -9,10 +9,21 @@ const icons = {
   experience: <svg className="additional-info-editor__header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--black-clr)"><path d="M10,2H14A2,2 0 0,1 16,4V6H20A2,2 0 0,1 22,8V19A2,2 0 0,1 20,21H4C2.89,21 2,20.1 2,19V8C2,6.89 2.89,6 4,6H8V4C8,2.89 8.89,2 10,2M14,6V4H10V6H14Z" /></svg>
 };
 
-function AdditionalInfoEditor({ person, section }) {
+function AdditionalInfoEditor({ person, setPerson, section }) {
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   const sectionTitle = section.slice(0, 1).toUpperCase() + section.slice(1);
+
+  function handleRemoveItem(id) {
+    const newPerson = JSON.parse(JSON.stringify(person));
+    for (let i = 0; i < newPerson[section].length; i++) {
+      if (newPerson[section][i].id === id) {
+        newPerson[section].splice(i, 1);
+        break;
+      }
+    }
+    setPerson(newPerson);
+  }
 
   return (
     <div className="additional-info-editor">
@@ -45,7 +56,7 @@ function AdditionalInfoEditor({ person, section }) {
           <div className="additional-info-editor__items">
             {
               person[section].map(item =>
-                <ItemPreview key={item.id} title={item.schoolName || item.companyName} />
+                <ItemPreview key={item.id} id={item.id} title={item.schoolName || item.companyName} removeItem={handleRemoveItem} />
               )
             }
           </div>
