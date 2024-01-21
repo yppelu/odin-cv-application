@@ -9,11 +9,6 @@
   padding: 1rem 0;
 }
 
-
-.additional-info-editor>.additional-info-editor__item-preview:last-of-type {
-  border-bottom: 4px solid var(--light-clr);
-}
-
 .additional-info-editor__header {
   display: flex;
   align-items: center;
@@ -59,6 +54,14 @@
 
 .additional-info-editor__collapse-icon.collapsed {
   transform: rotate(180deg);
+}
+
+.additional-info-editor__items {
+  width: 100%;
+}
+
+.additional-info-editor__items>.additional-info-editor__item-preview:last-of-type {
+  border-bottom: 4px solid var(--light-clr);
 }
 
 .additional-info-editor__add-info-button {

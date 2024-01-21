@@ -1,9 +1,9 @@
 import './additional-info-editor__item-preview.css';
 
-function ItemPreview() {
+function ItemPreview({ title }) {
   return (
     <div className="additional-info-editor__item-preview">
-      <button className="additional-info-editor__item-name">Umbrella Inc.</button>
+      <button className="additional-info-editor__item-name">{title}</button>
       <button
         className="additional-info-editor__remove-item-button"
         type="button"

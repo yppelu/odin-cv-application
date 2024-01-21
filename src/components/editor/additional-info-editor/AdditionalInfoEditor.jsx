@@ -9,15 +9,17 @@ const icons = {
   experience: <svg className="additional-info-editor__header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--black-clr)"><path d="M10,2H14A2,2 0 0,1 16,4V6H20A2,2 0 0,1 22,8V19A2,2 0 0,1 20,21H4C2.89,21 2,20.1 2,19V8C2,6.89 2.89,6 4,6H8V4C8,2.89 8.89,2 10,2M14,6V4H10V6H14Z" /></svg>
 };
 
-function AdditionalInfoEditor() {
+function AdditionalInfoEditor({ person, section }) {
   const [isCollapsed, setIsCollapsed] = useState(true);
+
+  const sectionTitle = section.slice(0, 1).toUpperCase() + section.slice(1);
 
   return (
     <div className="additional-info-editor">
       <div className="additional-info-editor__header">
         <h2 className="additional-info-editor__title">
-          {icons.education}
-          Education
+          {icons[section]}
+          {sectionTitle}
         </h2>
         <button
           className="additional-info-editor__collapse-button"
@@ -38,11 +40,19 @@ function AdditionalInfoEditor() {
           }
         </button>
       </div>
-      <ItemPreview />
-      <ItemPreview />
-      <ItemPreview />
+      {
+        !isCollapsed ? null :
+          <div className="additional-info-editor__items">
+            {
+              person[section].map(item =>
+                <ItemPreview key={item.id} title={item.schoolName || item.companyName} />
+              )
+            }
+          </div>
+      }
+
       <button className="additional-info-editor__add-info-button" type="button">
-        + Education
+        + {sectionTitle}
       </button>
     </div>
   );

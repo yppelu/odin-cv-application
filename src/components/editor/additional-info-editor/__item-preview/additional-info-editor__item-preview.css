@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
 
   border-top: 4px solid var(--light-clr);
   padding: 0 1rem;
@@ -21,7 +22,7 @@
 
   border: none;
   height: 100%;
-  width: 100%;
+  width: max-content;
 }
 
 .additional-info-editor__remove-item-button {

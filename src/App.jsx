@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-      <Editor setPerson={setPerson} />
+      <Editor person={person} setPerson={setPerson} />
       <Resume person={person} />
     </>
   );
