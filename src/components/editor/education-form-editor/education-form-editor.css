@@ -1,0 +1,65 @@
+.education-form-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  padding: 1rem;
+  width: 100%;
+}
+
+.education-form-editor__control-buttons {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.education-form-editor__delete-button,
+.education-form-editor__save-button {
+  border-radius: 8px;
+  font-weight: 500;
+  transition: var(--transition);
+
+  height: 2.5rem;
+  width: 11ch;
+}
+
+.education-form-editor__delete-button {
+  background-color: transparent;
+  color: var(--red-clr);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5ch;
+
+  border: 1px solid var(--red-clr);
+}
+
+.education-form-editor__delete-icon {
+  height: 60%;
+}
+
+.education-form-editor__save-button {
+  background-color: var(--white-clr);
+  color: var(--blue-clr);
+
+  border: 1px solid var(--blue-clr);
+}
+
+.education-form-editor__delete-button:hover {
+  background-color: var(--red-clr);
+  color: var(--white-clr);
+  border: 1px solid transparent;
+}
+
+.education-form-editor__delete-button:hover>.education-form-editor__delete-icon {
+  fill: var(--white-clr);
+}
+
+.education-form-editor__save-button:hover {
+  background-color: var(--blue-clr);
+  color: var(--white-clr);
+
+  border: 1px solid transparent;
+}

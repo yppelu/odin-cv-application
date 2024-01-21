@@ -3,13 +3,17 @@ import emptyData from '../../../helpers/empty-data.js';
 
 import './resume-controls.css';
 
-function ResumeControls({ setPerson }) {
+function ResumeControls({ setIsAddingNewData, setPerson }) {
   return (
     <div className="resume-controls">
       <button
         className="resume-controls__clear-button"
         type="button"
-        onClick={() => setPerson(JSON.parse(JSON.stringify(emptyData)))}
+        onClick={() => {
+          setIsAddingNewData({ isAddingToEducation: false, isAddingToExperience: false });
+          setPerson(JSON.parse(JSON.stringify(emptyData)));
+        }
+        }
       >
         <svg
           className="resume-controls__clear-icon"
@@ -24,7 +28,11 @@ function ResumeControls({ setPerson }) {
       <button
         className="resume-controls__load-example-button"
         type="button"
-        onClick={() => setPerson(JSON.parse(JSON.stringify(exampleData)))}
+        onClick={() => {
+          setIsAddingNewData({ isAddingToEducation: false, isAddingToExperience: false });
+          setPerson(JSON.parse(JSON.stringify(exampleData)));
+        }
+        }
       >
         Load Example
       </button>
