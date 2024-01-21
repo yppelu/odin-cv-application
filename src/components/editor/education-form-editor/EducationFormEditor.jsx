@@ -29,8 +29,8 @@ function EducationFormEditor({ person, id, setPerson, setIsAddingNewData }) {
 
   return (
     <form className="education-form-editor">
-      <EditField section={person.education[indexToChange]} fieldName="degree" changePerson={handleChangeEducation} />
       <EditField section={person.education[indexToChange]} fieldName="schoolName" changePerson={handleChangeEducation} />
+      <EditField section={person.education[indexToChange]} fieldName="degree" changePerson={handleChangeEducation} />
       <EditField section={person.education[indexToChange]} fieldName="location" changePerson={handleChangeEducation} />
       <EditField section={person.education[indexToChange]} fieldName="startDate" changePerson={handleChangeEducation} />
       <EditField section={person.education[indexToChange]} fieldName="endDate" changePerson={handleChangeEducation} />

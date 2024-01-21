@@ -1,5 +1,21 @@
 import './edit-field.css';
 
+
+const placeholders = {
+  fullName: 'First and last name',
+  email: 'Enter email',
+  phoneNumber: 'Enter phone number',
+  address: 'City, country',
+  schoolName: 'Enter school / university',
+  degree: 'Enter degree / field of study',
+  startDate: 'Enter start date',
+  endDate: 'Enter end date',
+  location: 'Enter location',
+  companyName: 'Enter company name',
+  positionTitle: 'Enter position title',
+  description: 'Enter description'
+};
+
 function EditField({ section, fieldName, changePerson }) {
   const labelTitle = turnFieldNameIntoTitle(fieldName);
 
@@ -9,6 +25,7 @@ function EditField({ section, fieldName, changePerson }) {
       <input
         className="edit-field__input"
         type="text"
+        placeholder={placeholders[fieldName]}
         value={section[fieldName]}
         onChange={(e) => changePerson(e.target.value, fieldName)}
       />
