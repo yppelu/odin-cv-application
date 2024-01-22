@@ -1,0 +1,33 @@
+.printing-button {
+  background-color: var(--white-clr);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--blue-clr);
+  transition: var(--transition);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+
+  border: none;
+  height: 3rem;
+  width: 3rem;
+}
+
+.printing-icon {
+  aspect-ratio: 1 / 1;
+  height: 85%;
+}
+
+.printing-button:active {
+  transform: scale(0.95);
+}
+
+@media (pointer: coarse) {
+  .printing-button {
+    display: none;
+  }
+}
